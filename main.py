@@ -263,7 +263,7 @@ def score_email(checks: dict) -> dict:
     return {"score": score, "risk_level": risk, "reasons": reasons}
 
 
-@app.get("/")
+@app.api_route("/", methods=["GET", "HEAD"])
 def root():
     return {
         "name": "MailGuard API",
